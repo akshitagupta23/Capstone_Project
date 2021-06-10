@@ -8,11 +8,11 @@ The Customer churn app that we have proposed here predicts the likelihood of cus
 
 Implementation of projecct building process is done through following steps.
 
-> Step 1 Research Phase
+> Research Phase
 
-> Step 2 Building of Web APP
+> Building of Web APP
 
-> Step 3 Containerisation of Project using Docker
+> Containerisation of Project using Docker
 
 
 ### DataSet
@@ -23,6 +23,11 @@ Implementation of projecct building process is done through following steps.
 - Services that each customer has signed up for – phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies
 - Customer account information – how long they’ve been a customer, contract, payment method, paperless billing, monthly charges, and total charges
 - Demographic info about customers – gender, age range, and if they have partners and dependents
+
+### Research Phase
+
+For Research phase we have used Jupyter Notebook `Churn.ipynb` file. This file has the hyperparameter tunning research phase.
+
 
 ### ML Model & Hyperparamter Tunning
 
