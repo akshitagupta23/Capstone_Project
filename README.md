@@ -38,16 +38,6 @@ Hyperparameter Tunning:  We have used `RandomSearchCV` and used the `clf.best_pa
 ### Deployment / Web APP
 For building the Web APP we have used `Streamlit` package in `web_app.py` file. 
 
-
-![Homepage](images/Churn_app_homepage.png)
-
-
-
-
-
-![Batch-Predict](images/churn_batch_predict..PNG)
-
-
 ### Docker
 To make the project deployment robust we have used the Docker for containerisation of the project.
 
@@ -57,8 +47,7 @@ To make the project deployment robust we have used the Docker for containerisati
 
  - Clone this repository and run `python churn_model_train.py`. This will create `model.joblib` (size > 100MB) in project folder which will be used in Web App.
  - Run `streamlit run web_app.py` and wait for ~5 minutes to load the app then visit `NETWORK URL` as shown in cmd
- - For Batch prediction one can use the sample `test_sample.csv`.
- - For Online prediction enter the features values (e.g as provided in `test_sample.json`) in Web APP UI and Click `Predict`.
+ - Batch prediction can be done using the sample `test_sample.csv`
 
 
 ### Future Scope
