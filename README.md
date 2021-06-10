@@ -38,7 +38,7 @@ Hyperparameter Tunning:  We have used `RandomSearchCV` and used the `clf.best_pa
 ### Deployment / Web APP
 For building the Web APP we have used `Streamlit` package in `web_app.py` file. 
 
-![Online_Predict_Select](..images/churn_online_predict..PNG)
+![Homepage](images/Churn_app_homepage.png)
 
 
 ### Docker
