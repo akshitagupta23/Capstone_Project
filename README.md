@@ -75,7 +75,10 @@ To make the project deployment robust we have used the Docker for containerisati
 
          - Scheduled running of jobs
               `Cloud Composer (Airflow), Cloud Scheduler`
+         
+         - CI/CD 
+           For CI/CD as a part of MLOPS one can use Gitlab CI/CD Pipeline (Worth mentioning the Cost factor involved).
 
-  #### CI/CD using Github
+  
 
-     CI/CD as a part of MLOPS can be achieved using github actions and workflow. These components along with `.github-ci.yml` file on any pull request will trigger the pipeline      thus compeleting the CI/CD.
+     
