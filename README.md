@@ -47,31 +47,30 @@ To make the project deployment robust we have used the Docker for containerisati
 
 ### Future Scope
 
-#### Serverless / Cloud Deployment
+  #### Serverless / Cloud Deployment
 
-After the Docker step one can use the container to run serverless on GCP, AWS etc (Worth mentioning the Cost factor while using the cloud services.)
-Following are the probable ways of running the Web App on 
-`Google Cloud Platform`
+       After the Docker step one can use the container to run serverless on GCP, AWS etc (Worth mentioning the Cost factor while using the cloud services.)
+       Following are the probable ways of running the Web App on 
+       `Google Cloud Platform`
 
-Prerequiste: Enable Google API: $Project-ID, $Container-Registry, $Google-Cloud-Storage
+       Prerequiste: Enable Google API: $Project-ID, $Container-Registry, $Google-Cloud-Storage
 
-Some of ways to deploy on `GCP` using following API's
- - Tasks taking long time with pre-configured environment
-       `Kubernetes, Dataproc, AI Platform Default/ Vertex-AI`
+       Some of ways to deploy on `GCP` using following API's
+        - Tasks taking long time with pre-configured environment
+              `Kubernetes, Dataproc, AI Platform Default/ Vertex-AI`
 
-- Tasks taking long time with flexible environment
-    `AI Platform Custom Training/ Vertex-AI custom Training and Cloud Build`
-    
- - Online job taking few minutes to run with flexible environment
-      `Cloud Run, App Engine`
-  
-  - Online jobs taking seconds to run with less flexible environment
-       `Cloud Function`
-       
-  - Scheduled running of jobs
-       `Cloud Composer (Airflow), Cloud Scheduler`
+       - Tasks taking long time with flexible environment
+           `AI Platform Custom Training/ Vertex-AI custom Training and Cloud Build`
 
-#### CI/CD using Github
+        - Online job taking few minutes to run with flexible environment
+             `Cloud Run, App Engine`
 
- CI/CD as a part of MLOPS can be achieved using github actions and workflow. These components along with `.github-ci.yml` file.
- Once done any pull request will trigger the pipeline thus compeleting the CI/CD.
+         - Online jobs taking seconds to run with less flexible environment
+              `Cloud Function`
+
+         - Scheduled running of jobs
+              `Cloud Composer (Airflow), Cloud Scheduler`
+
+  #### CI/CD using Github
+
+     CI/CD as a part of MLOPS can be achieved using github actions and workflow. These components along with `.github-ci.yml` file on any pull request will trigger the pipeline      thus compeleting the CI/CD.
