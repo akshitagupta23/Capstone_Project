@@ -36,7 +36,10 @@ As part of preprocessing and feature engineering we used the Scikit-Learn's `Col
 Hyperparameter Tunning:  We have used `RandomSearchCV` and used the `clf.best_params_` to use the best tuned hyperparameters.  
 
 ### Deployment / Web APP
-For building the Web APP we have used `Streamlit` package in `web_app.py` file.
+For building the Web APP we have used `Streamlit` package in `web_app.py` file. 
+
+![Online_Predict_Select](.images/churn_online_predict..PNG)
+
 
 ### Docker
 To make the project deployment robust we have used the Docker for containerisation of the project.
