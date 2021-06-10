@@ -71,7 +71,8 @@ To make the project deployment robust we have used the Docker for containerisati
 
        Prerequiste: Enable Google API: $Project-ID, $Container-Registry, $Google-Cloud-Storage
 
-       Some of ways to deploy on `GCP` using following API's
+       Some of ways to deploy on GCP using following API's
+       
         - Tasks taking long time with pre-configured environment
               `Kubernetes, Dataproc, AI Platform Default/ Vertex-AI`
 
@@ -87,8 +88,8 @@ To make the project deployment robust we have used the Docker for containerisati
          - Scheduled running of jobs
               `Cloud Composer (Airflow), Cloud Scheduler`
          
-         - CI/CD 
-           For CI/CD as a part of MLOPS one can use Gitlab CI/CD Pipeline (Worth mentioning the Cost factor involved).
+    - CI/CD 
+        For CI/CD as a part of MLOPS one can use Gitlab CI/CD Pipeline (Worth mentioning the Cost factor involved).
 
   
 
