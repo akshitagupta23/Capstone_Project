@@ -6,7 +6,7 @@ Customer Churn is one of the nightmares any organisation wants to see. It incurs
 To tackle this we need to understand the customer base that are likely to be churned. 
 The Customer churn app that we have proposed here predicts the likelihood of customer getting churned or not for telecom managers to buid customer oriented plans and services.
 
-Implementation of projecct building process is done through following steps.
+Implementation of project building process is done through following steps.
 
 > Research Phase
 
