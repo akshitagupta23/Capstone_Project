@@ -38,6 +38,11 @@ Hyperparameter Tunning:  We have used `RandomSearchCV` and used the `clf.best_pa
 ### Deployment / Web APP
 For building the Web APP we have used `Streamlit` package in `web_app.py` file. 
 
+![Homepage](images/Churn_app_homepage.png)
+
+
+![Batch-Predict](churn_batch_predict.PNG)
+
 ### Docker
 To make the project deployment robust we have used the Docker for containerisation of the project.
 
