@@ -41,6 +41,9 @@ For building the Web APP we have used `Streamlit` package in `web_app.py` file.
 ![Homepage](images/Churn_app_homepage.png)
 
 
+![Batch-Predict](images/churn_batch_predict..PNG)
+
+
 ### Docker
 To make the project deployment robust we have used the Docker for containerisation of the project.
 **Note**  Streamlit and UTF-8 encoding commands are added to Dockerfile otherwise the web app will show errors.
