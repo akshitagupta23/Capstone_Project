@@ -37,6 +37,11 @@ For building the Web APP we have used `Streamlit` package in `web_app.py` file.
 To make the project deployment robust we have used the Docker for containerisation of the project.
 **Note**  Streamlit and UTF-8 encoding commands are added to Dockerfile otherwise the web app will show errors.
 
+**How to Run** 
+     - Clone this repository and run `python churn_model_train.py`. This will create `model.joblib` in project folder which will be used in Web App.
+     - Run `streamlit run web_app.py` 
+
+
 ### Future Scope
 
 #### Serverless / Cloud Deployment
