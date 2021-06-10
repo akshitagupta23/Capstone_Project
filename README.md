@@ -46,7 +46,7 @@ To make the project deployment robust we have used the Docker for containerisati
 ### **How to Run**
 
  - Clone this repository and run `python churn_model_train.py`. This will create `model.joblib` (size > 100MB) in project folder which will be used in Web App.
- - Run `streamlit run web_app.py` and wait for ~5 minutes to load the app then visit `NETWORK URL` as shown in cmd
+ - Run `streamlit run web_app.py` and wait for ~5 minutes to load the app then visit `NETWORK URL`
  - Batch prediction can be done using the sample `test_sample.csv`
 
 
