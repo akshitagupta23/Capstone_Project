@@ -27,7 +27,7 @@ Implementation of project building process is done through following steps.
 ### Research Phase
 
 For Research phase we have used Jupyter Notebook [Churn.ipynb](https://github.com/akshitagupta23/Udacity_DS_ND_Capstone_Project/blob/main/Churn.ipynb). This file containes 
-EDA, Feature Engineering, Hyperparameter Tunning and Explainable AI (XAI)
+EDA, Feature Engineering, Hyperparameter Tunning  and Model Evaluation
 
 ### ML Model & Hyperparamter Tunning
 
