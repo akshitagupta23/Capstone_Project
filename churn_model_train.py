@@ -81,11 +81,10 @@ print("Model building with hyperparameter tunned during Research Phase")
 
 def build_model():
     '''
-    Machine Learning classification model function that executes following steps:
+    Machine Learning classification model function that executes following:
       1. Building Machine Learning pipeline
-      2. Running GridSearchCV for Hyper-parameter tunning
-      
-      input: None
+            
+    input: None
     output: RandomSearch best model.
     '''
     pipeline_clf = Pipeline([
