@@ -51,6 +51,7 @@ Accuracy is defined as
 It has 7043 rows (customers) and 21 columns (features).
  
   ![Data-Set](images/Data_Exploration.png)
+  *Dataset*
   
 
 
