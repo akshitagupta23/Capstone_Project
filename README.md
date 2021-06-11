@@ -1,6 +1,12 @@
 # Capstone_Project
 ## Churn Prediction Web-App
 
+### Project Overview
+Present era of telecom industry tries to lure the customers by providing best offers and services, yet if some customer leaves its telecom provider this becomes pain point that needs to be alleivated. This project understand the customer attrition as a potential pain point of telecom industry. 
+It involves building medium like Web APP as UI for telecom leadership and C-suite executives to help them find the rationality of customer decision of leaving. Open source data has been used to build the Web App which is being powered by machine learning at the back end to provide best and in time prediction of the customers.
+
+The document consists of the methodology, results and future scope of scalability of Web-UI. The conclusion is that proposed use of algorithm has been proven to be lightweight and reduces time latency.
+
 ### Problem Statement
 Customer Churn is one of the nightmares any organisation wants to see. It incurs expenditures on any organization and loss of brand value. 
 To tackle this we need to understand the customer base that are likely to be churned. 
@@ -27,10 +33,11 @@ Implementation of project building process is done through following steps.
 
 >- **False negatives** predicticted observation does not belongs to a class, however in reality it does.
 
-   In this project I have used **Accuracy** as our evaulation metric whic is defined as 
+ In this project I have used accuracy as our evaulation metric since data set was not heavily imbalanced other wise PR curve would have been the best fit. Another reason for choosing the accuracy is that since the project is of nature of MVS(minimum viable service) and it helps leaders and strategy building team of a telecom organisation to frame best offers for customers so accuracy as metric will serve as ROI measurement.  
+Accuracy is defined as 
 
                            Accuracy = TP+TN/TP+FP+FN+TN
-
+   
 
 ### DataSet and Data Exploration
  We have used open source dataset from [Kaggle](https://www.kaggle.com/blastchar/telco-customer-churn). 
@@ -114,6 +121,12 @@ Result metric as shown below
  ![Confusion-Matrix.png](images/confusion-mat.png)
 
 
+### Justification 
+For this project as mentioned in Metric I wanted to build an MVS(minimum viable service) project which will also have the easy scalability(as mentioned in Future Scope) thus I have taken Random Forest Algorithim. Using this algorithm not only provided the accuracy but also have increased the Recall with minimum set of hyperparameter tunning.
+
+Another reason was to reduce the time taken by Web-UI to load and also to use the minimum compute resources for scaling th MVS to cloud like GCP for future scope, however if algorithm like Xgboost or Neural Networks (NN) have been used then they might have given the better result but will be costing the computation time.
+
+
 ### Deployment / Web APP
 For building the Web APP we have used `Streamlit` package in `web_app.py` file. 
 
@@ -143,10 +156,20 @@ Provided `Dockerfile` can be used to build the image that then can be used in Fu
 
 **Note**  Streamlit and UTF-8 encoding commands are added to Dockerfile otherwise the web app will show errors.
 
+### Reflection
 
-### Future Scope / Improvement
+Data being the new oil of present world has enticed me in pursuing my interest in data science at the first place. This project has helped in implementing the CRISP-DM lifecycle. It was a challenging project since I explored the option of containersization through Docker and building of Web-UI using python Streamlit package. 
+Interesting to see if how the neural networks using tensorflow would have improved the model performance also to observe the impact of neural networks on the App response time if MVS goes to production.
 
-  #### Serverless / Cloud Deployment
+
+### Improvement
+Customer churn prediction could be improved by one or ensemble of various algorithms like NB, SVM, Xgboost and MLP through weighted average.  
+For scalability of the project I have proposed some ways of serverless deployment on GCP of the app so that the app caters to the prediciton on real time streaming data. 
+Also A/B testing could be used to check the performance of the different models. 
+
+Use of model interpretion packages and tools like LIME, SHAP, WHAT-IF can help to answer the questions of whether a model is ethical or not. 
+
+  ##### Serverless / Cloud Deployment
 
        After the Docker step one can use the container to run serverless on GCP, AWS etc (Worth mentioning the Cost factor while using the cloud services.)
        Following are the probable ways of running the Web App on 
