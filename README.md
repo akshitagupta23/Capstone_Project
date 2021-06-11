@@ -26,12 +26,14 @@ Implementation of project building process is done through following steps.
 
 ### Research Phase
 
-For Research phase we have used Jupyter Notebook `Churn.ipynb` file. This file has the hyperparameter tunning research phase.
-
+For Research phase we have used Jupyter Notebook [Churn.ipynb](https://github.com/akshitagupta23/Udacity_DS_ND_Capstone_Project/blob/main/Churn.ipynb). This file containes 
+EDA, Feature Engineering, Hyperparameter Tunning and Explainable AI (XAI)
 
 ### ML Model & Hyperparamter Tunning
 
-As part of preprocessing and feature engineering we used the Scikit-Learn's `Columntransfer`, `Ohe` and `Pipeline` for missing value imputation, standardisation. For Model building we have used Random Forest Classifier because of the presence of categorical input features. Model was serialized by `joblib` package.
+As part of preprocessing and feature engineering we used the Scikit-Learn's `Columntransfer`, `Ohe` and `Pipeline` for missing value imputation, standardisation.
+
+For Model building we have used Random Forest Classifier because of the presence of categorical input features. Model was serialized by `joblib` package.
 
 Hyperparameter Tunning:  We have used `RandomSearchCV` and used the `clf.best_params_` to use the best tuned hyperparameters.  
 
@@ -40,21 +42,30 @@ For building the Web APP we have used `Streamlit` package in `web_app.py` file.
 
 ![Homepage](images/Churn_app_homepage.png)
 
+  #### **How to Run**
+
+   - Clone this repository and run `python churn_model_train.py`. This will create `model.joblib` (size > 100MB) in project folder which will be used in Web App.
+   - Run `streamlit run web_app.py` and wait for ~5 minutes to load the app then visit `NETWORK URL`
+   - **Online Prediction** can be done using the `test_sample.json`.
+      Expected result shown below
+
+        ![Online-Result](images/Online_Predict_Result.png)
 
 
-![Batch-Predict](images/churn_batch_predict.PNG)
+
+
+   - **Batch Prediction** can be done using the sample `test_sample.csv`
+       Expected result shown below
+
+
+         ![Batch-Predict](images/churn_batch_predict.PNG)
+
 
 ### Docker
 To make the project deployment robust we have used the Docker for containerisation of the project.
+Provided `Dockerfile` can be used to build the image that then can be used in Future Scope section
 
 **Note**  Streamlit and UTF-8 encoding commands are added to Dockerfile otherwise the web app will show errors.
-
-### **How to Run**
-
- - Clone this repository and run `python churn_model_train.py`. This will create `model.joblib` (size > 100MB) in project folder which will be used in Web App.
- - Run `streamlit run web_app.py` and wait for ~5 minutes to load the app then visit `NETWORK URL`
- - Batch prediction can be done using the sample `test_sample.csv`
-
 
 ### Future Scope
 
