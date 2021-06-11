@@ -33,7 +33,7 @@ Implementation of project building process is done through following steps.
 
 >- **False negatives** predicticted observation does not belongs to a class, however in reality it does.
 
- In this project I have used accuracy as our evaulation metric since data set was not heavily imbalanced other wise PR curve would have been the best fit. Another reason for choosing the accuracy is that since the project is of nature of MVS(minimum viable service) and it helps leaders and strategy building team of a telecom organisation to frame best offers for customers so accuracy as metric will serve as ROI measurement.  
+ In this project I have used accuracy as our evaulation metric since data set was not heavily imbalanced otherwise PR curve would have been the best fit. Another reason for choosing the accuracy is that since the project is of nature of MVS(minimum viable service) and it helps leaders and strategy building team of a telecom organisation to frame best offers for customers so accuracy as metric will serve as ROI measurement.  
 Accuracy is defined as 
 
                            Accuracy = TP+TN/TP+FP+FN+TN
@@ -129,7 +129,7 @@ For Refining the training we have used `RandomSearchCV` to use the best tuned hy
 
   | ![Refinement](images/hpt.png) | 
   |:--:| 
-  | *Rfinement* |
+  | *Refinement* |
 
 ### Results
 #### Model Evaluation
@@ -142,9 +142,9 @@ Result metric as shown below
 
 
 ### Justification 
-For this project as mentioned in Metric I wanted to build an MVS(minimum viable service) project which will also have the easy scalability(as mentioned in Future Scope) thus I have taken Random Forest Algorithim. Using this algorithm not only provided the accuracy but also have increased the Recall with minimum set of hyperparameter tunning.
+For this project as mentioned in Metric I wanted to build project as MVS(minimum viable service) which will also have the easy scalability(as mentioned in Future Scope) thus I have taken Random Forest Algorithim. Using this algorithm not only provided the accuracy but also have increased the Recall with minimum set of hyperparameter tunning.
 
-Another reason was to reduce the time taken by Web-UI to load and also to use the minimum compute resources for scaling th MVS to cloud like GCP for future scope, however if algorithm like Xgboost or Neural Networks (NN) have been used then they might have given the better result but will be costing the computation time.
+Another reason was to reduce the time taken by Web-UI to load and also to use the minimum compute resources for scaling the MVS to cloud like GCP for future scope, however if algorithm like Xgboost or Neural Networks (NN) have been used then they might have given the better result but will be costing the computation time.
 
 
 ### Deployment / Web APP
@@ -186,8 +186,9 @@ Provided `Dockerfile` can be used to build the image that then can be used in Fu
 
 ### Reflection
 
-Data being the new oil of present world has enticed me in pursuing my interest in data science at the first place. This project has helped in implementing the CRISP-DM lifecycle. It was a challenging project since I explored the option of containersization through Docker and building of Web-UI using python Streamlit package. 
-Interesting to see if how the neural networks using tensorflow would have improved the model performance also to observe the impact of neural networks on the App response time if MVS goes to production.
+Data being the new oil of present world has enticed me in pursuing my interest in data science at the first place. This project has helped in implementing the CRISP-DM lifecycle. 
+It was a challenging project since I explored the option of containersization through Docker and building of Web-UI using python Streamlit package. 
+Interesting to see how the neural networks using tensorflow would have improved the model performance also to observe the impact of neural networks on the App response time if MVS goes to production.
 
 
 ### Improvement
