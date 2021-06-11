@@ -27,7 +27,7 @@ Implementation of project building process is done through following steps.
 
 >- **False negatives** predicticted observation does not belongs to a class, however in reality it does.
 
-   In this project we have used **Accuracy** as our evaulation metric whic is defined as 
+   In this project I have used **Accuracy** as our evaulation metric whic is defined as 
 
                            Accuracy = TP+TN/TP+FP+FN+TN
 
@@ -48,7 +48,7 @@ It has 7043 rows (customers) and 21 columns (features).
 
 
 #### Data Visualization
-  For data visualization we checked distribution of the columns through `sns.distplot` 
+  For data visualization I checked distribution of the columns through `sns.distplot` 
   
   ![Dist](images/EDA-1.png)
   
@@ -65,15 +65,15 @@ It has 7043 rows (customers) and 21 columns (features).
 
 ### Data Preprocessing / Feature Engineering
 
-Data preprocessing/ feature engineering is executed Jupyter Notebook [Churn.ipynb](https://github.com/akshitagupta23/Udacity_DS_ND_Capstone_Project/blob/main/Churn.ipynb).
+For Data preprocessing/ feature engineering I have used `Scikit-Learn` pipeline and `ColumnTransformers` (Ref: [Churn.ipynb](https://github.com/akshitagupta23/Udacity_DS_ND_Capstone_Project/blob/main/Churn.ipynb)).
 
-We have used `Scikit-Learn` pipeline and `ColumnTransformers`.
 ColumnTransformers performs:
 > Missing value imputation
 > Scaling of non-bool values by StandardScaler
 > One hot encoding for categorical variables
 
    ![Data-Preprocessing](images/Feature_Eng.png)
+
 
 ### Implementation- ML Model & Hyperparamter Tunning
 
@@ -82,10 +82,12 @@ Project Structure looks as follows
        
 ![Project-Structure](images/folder_structure.png)
 
+
 Excrepts of model training pipeline is as shown below (Ref: [Churn.ipynb](https://github.com/akshitagupta23/Udacity_DS_ND_Capstone_Project/blob/main/Churn.ipynb))
 
    ![Model-Pipeline](images/Model_train_pipeline.png)
    
+
 Excrepts of Churn Web APP from `web_app.py` being build using **Streamlit**
 
   ![Streamlit-File](images/web_app_excrept.png)
@@ -96,9 +98,11 @@ Excrepts of Churn Web APP from `web_app.py` being build using **Streamlit**
    ![Random-Forest](images/Algorithm.png)
 
 
+
 ### Refinement
 For Refining the training we have used `RandomSearchCV` to use the best tuned hyperparameters and  `clf.best_params_`  to get the best tuned parameters.
 ![Refinement](images/hpt.png)
+
 
 ### Results
 #### Model Evaluation
@@ -136,6 +140,7 @@ To make the project deployment robust we have used the Docker for containerisati
 Provided `Dockerfile` can be used to build the image that then can be used in Future Scope section
 
 **Note**  Streamlit and UTF-8 encoding commands are added to Dockerfile otherwise the web app will show errors.
+
 
 ### Future Scope / Improvement
 
