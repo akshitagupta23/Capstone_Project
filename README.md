@@ -86,18 +86,18 @@ Excrepts of model training pipeline is as shown below (Ref: [Churn.ipynb](https:
 
    ![Model-Pipeline](images/Model_train_pipeline.png)
    
-Excrepts of Churn Web APP from `web_app.py` being build using Streamlit
+Excrepts of Churn Web APP from `web_app.py` being build using **Streamlit**
 
   ![Streamlit-File](images/web_app_excrept.png)
 
-**Algorithm**
+**Algorithm**: 
      I have used bagging technique of machine learning training by using [Random Forest Algorithm](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
      
    ![Random-Forest](images/Algorithm.png)
 
 
 ### Refinement
-For Refining the trainig we have used `RandomSearchCV` to use the best tuned hyperparameters and  `clf.best_params_`  to get the best tuned parameters.
+For Refining the training we have used `RandomSearchCV` to use the best tuned hyperparameters and  `clf.best_params_`  to get the best tuned parameters.
 ![Refinement](images/hpt.png)
 
 ### Results
@@ -105,7 +105,7 @@ For Refining the trainig we have used `RandomSearchCV` to use the best tuned hyp
 As a part of model evaluation I retrain the model using the hyper tunned parameters. This result in improving Recall by 0.2 value.
 Result metric as shown below
   
-  ![Confusion-Matrix.png](images/confusion_mat.png)
+ ![Confusion-Matrix.png](images/confusion-mat.png)
 
 
 ### Deployment / Web APP
