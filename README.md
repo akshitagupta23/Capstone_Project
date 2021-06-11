@@ -57,8 +57,7 @@ For building the Web APP we have used `Streamlit` package in `web_app.py` file.
    - **Batch Prediction** can be done using the sample `test_sample.csv`
        Expected result shown below
 
-
-         ![Batch-Predict](images/churn_batch_predict.PNG)
+        ![Batch-Predict](images/churn_batch_predict.PNG)
 
 
 ### Docker
