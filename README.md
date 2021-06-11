@@ -37,7 +37,7 @@ Implementation of project building process is done through following steps.
  
  Brief description of dastaset is as follows ([source](https://www.kaggle.com/blastchar/telco-customer-churn))
 - Customers who left within the last month – the column is called Churn
-- Services that each customer has signed up for – phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies
+- Services that each customer has signed up for – phone, multiple lines, internet, online security, online backup, device protection, tech support, streaming TV and movies
 - Customer account information – how long they’ve been a customer, contract, payment method, paperless billing, monthly charges, and total charges
 - Demographic info about customers – gender, age range, and if they have partners and dependents
 
@@ -65,11 +65,13 @@ It has 7043 rows (customers) and 21 columns (features).
 
 ### Data Preprocessing / Feature Engineering
 
-For Data preprocessing/ feature engineering I have used `Scikit-Learn` pipeline and `ColumnTransformers` (Ref: [Churn.ipynb](https://github.com/akshitagupta23/Udacity_DS_ND_Capstone_Project/blob/main/Churn.ipynb)).
+For Data preprocessing/ feature engineering I have used Scikit-Learn's `Pipeline` and `ColumnTransformers` (Ref: [Churn.ipynb](https://github.com/akshitagupta23/Udacity_DS_ND_Capstone_Project/blob/main/Churn.ipynb)).
 
 ColumnTransformers performs:
 > Missing value imputation
+
 > Scaling of non-bool values by StandardScaler
+
 > One hot encoding for categorical variables
 
    ![Data-Preprocessing](images/Feature_Eng.png)
