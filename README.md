@@ -60,17 +60,21 @@ It has 7043 rows (customers) and 21 columns (features).
 #### Data Visualization
   For data visualization I checked distribution of the columns through `sns.distplot` 
   
-  ![Dist](images/EDA-1.png)
-  
+  | ![Dist](images/EDA-1.png) | 
+  |:--:| 
+  | *Distribution* |
   
   Donut chart through `matplotlib.pyplot.pie` 
   
-  ![Donut](images/EDA-2.png)
-  
+  | ![Donut](images/EDA-2.png) | 
+  |:--:| 
+  | *Donut-Chart* |
   
   Correlation heatmap of numerical variable
-  
-  ![Corr](images/Corr_Map.png)
+    
+  | ![Corr](images/Corr_Map.png) | 
+  |:--:| 
+  | *Correlation Heatmap* |
 
 
 ### Data Preprocessing / Feature Engineering
@@ -84,44 +88,57 @@ ColumnTransformers performs:
 
 > One hot encoding for categorical variables
 
-   ![Data-Preprocessing](images/Feature_Eng.png)
-
+  | ![Data-Preprocessing](images/Feature_Eng.png) | 
+  |:--:| 
+  | *Data-Preprocessing* |
 
 ### Implementation- ML Model & Hyperparamter Tunning
 
 Python 3.8 (Anaconda 3–64 bit) was used for development and testing. I also used ([Docekr](https://www.docker.com/)) to build the image.
 Project Structure looks as follows
-       
-![Project-Structure](images/folder_structure.png)
+      
+  | ![Project-Structure](images/folder_structure.png) | 
+  |:--:| 
+  | *Project-Structure* |
 
 
 Excrepts of model training pipeline is as shown below (Ref: [Churn.ipynb](https://github.com/akshitagupta23/Udacity_DS_ND_Capstone_Project/blob/main/Churn.ipynb))
-
-   ![Model-Pipeline](images/Model_train_pipeline.png)
    
+  | ![Model-Pipeline](images/Model_train_pipeline.png) | 
+  |:--:| 
+  | *Model-Pipeline* |
 
 Excrepts of Churn Web APP from `web_app.py` being build using **Streamlit**
-
-  ![Streamlit-File](images/web_app_excrept.png)
-
+  
+  | ![Streamlit-File](images/web_app_excrept.png) | 
+  |:--:| 
+  | *Streamlit-Snippet* |
+  
+  
 **Algorithm**: 
      I have used bagging technique of machine learning training by using [Random Forest Algorithm](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
      
-   ![Random-Forest](images/Algorithm.png)
-
+   
+  | ![Random-Forest](images/Algorithm.png) | 
+  |:--:| 
+  | *Random Forest* |
 
 
 ### Refinement
 For Refining the training we have used `RandomSearchCV` to use the best tuned hyperparameters and  `clf.best_params_`  to get the best tuned parameters.
-![Refinement](images/hpt.png)
 
+  | ![Refinement](images/hpt.png) | 
+  |:--:| 
+  | *Rfinement* |
 
 ### Results
 #### Model Evaluation
 As a part of model evaluation I retrain the model using the hyper tunned parameters. This result in improving Recall by 0.2 value.
 Result metric as shown below
-  
- ![Confusion-Matrix.png](images/confusion-mat.png)
+ 
+  | ![Confusion-Matrix.png](images/confusion-mat.png) | 
+  |:--:| 
+  | *Confusion Matrix* |
 
 
 ### Justification 
@@ -133,24 +150,31 @@ Another reason was to reduce the time taken by Web-UI to load and also to use th
 ### Deployment / Web APP
 For building the Web APP we have used `Streamlit` package in `web_app.py` file. 
 
-![Homepage](images/Churn_app_homepage.png)
 
+  | ![Homepage](images/Churn_app_homepage.png) | 
+  |:--:| 
+  | *Homepage- Web App* |
+  
+  
   #### **How to Run**
 
    - **Must Do**: Clone this repository and run `python churn_model_train.py`. This will create `model.joblib` (size > 100MB) in project folder which will be used in Web App.
    - Run `streamlit run web_app.py` and wait for ~5 minutes to load the app then visit `NETWORK URL`
    - **Online Prediction** can be done using the `test_sample.json`.
       Expected result shown below
-
-        ![Online-Result](images/Online_Predict_Result.png)
-
+        
+        | ![Online-Result](images/Online_Predict_Result.png) | 
+        |:--:| 
+        | *Result-Online Predict* |
 
 
 
    - **Batch Prediction** can be done using the sample `test_sample.csv`
        Expected result shown below
-
-        ![Batch-Predict](images/churn_batch_predict.PNG)
+        
+        | ![Batch-Predict](images/churn_batch_predict.PNG) | 
+        |:--:| 
+        | *Result-Batch Predict* |
 
 
 ### Docker
@@ -158,6 +182,7 @@ To make the project deployment robust we have used the Docker for containerisati
 Provided `Dockerfile` can be used to build the image that then can be used in Future Scope section
 
 **Note**  Streamlit and UTF-8 encoding commands are added to Dockerfile otherwise the web app will show errors.
+
 
 ### Reflection
 
@@ -172,7 +197,7 @@ Also A/B testing could be used to check the performance of the different models.
 
 Use of model interpretion packages and tools like LIME, SHAP, WHAT-IF can help to answer the questions of whether a model is ethical or not. 
 
-  ##### Serverless / Cloud Deployment
+  ##### Scalability Through Serverless / Cloud Deployment
 
        After the Docker step one can use the container to run serverless on GCP, AWS etc (Worth mentioning the Cost factor while using the cloud services.)
        Following are the probable ways of running the Web App on 
