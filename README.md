@@ -80,33 +80,7 @@ ColumnTransformers performs:
 Python 3.8 (Anaconda 3–64 bit) was used for development and testing. I also used ([Docekr](https://www.docker.com/)) to build the image.
 Project Structure looks as follows
        
-│   .gitignore
-│   Churn.ipynb
-│   churn_model_train.py
-│   Dockerfile
-│   LICENSE
-│   model.joblib
-│   README.md
-│   requirement.txt
-│   test_sample.json
-│   web_app.py
-│
-├───Data
-│       Customer-Churn.csv
-│
-└───images
-        Churn_app_homepage.png
-        churn_batch_predict..PNG
-        churn_batch_predict.PNG
-        churn_online_predict..PNG
-        Corr_Map.png
-        customer_churn.png
-        Data_Exploration.png
-        EDA-1.png
-        EDA-2.png
-        EDA.png
-        Feature_Eng.png
-        Online_Predict_Result.png
+![Project-Structure](images/folder_structure.png)
 
 Excrepts of model training pipeline is as shown below (Ref: [Churn.ipynb](https://github.com/akshitagupta23/Udacity_DS_ND_Capstone_Project/blob/main/Churn.ipynb))
 
@@ -128,7 +102,7 @@ For Refining the trainig we have used `RandomSearchCV` to use the best tuned hyp
 
 ### Results
 #### Model Evaluation
-As a part of model evaluation I retrain the model using the hyper tunned parameters. This result in improving the Accuracy and Recall.
+As a part of model evaluation I retrain the model using the hyper tunned parameters. This result in improving Recall by 0.2 value.
 Result metric as shown below
   
   ![Confusion-Matrix.png](images/confusion_mat.png)
@@ -141,7 +115,7 @@ For building the Web APP we have used `Streamlit` package in `web_app.py` file.
 
   #### **How to Run**
 
-   - Clone this repository and run `python churn_model_train.py`. This will create `model.joblib` (size > 100MB) in project folder which will be used in Web App.
+   - **Must Do**: Clone this repository and run `python churn_model_train.py`. This will create `model.joblib` (size > 100MB) in project folder which will be used in Web App.
    - Run `streamlit run web_app.py` and wait for ~5 minutes to load the app then visit `NETWORK URL`
    - **Online Prediction** can be done using the `test_sample.json`.
       Expected result shown below
@@ -163,7 +137,7 @@ Provided `Dockerfile` can be used to build the image that then can be used in Fu
 
 **Note**  Streamlit and UTF-8 encoding commands are added to Dockerfile otherwise the web app will show errors.
 
-### Future Scope
+### Future Scope / Improvement
 
   #### Serverless / Cloud Deployment
 
@@ -194,5 +168,4 @@ Provided `Dockerfile` can be used to build the image that then can be used in Fu
         For CI/CD as a part of MLOPS one can use Gitlab CI/CD Pipeline (Worth mentioning the Cost factor involved).
 
   
-
      
