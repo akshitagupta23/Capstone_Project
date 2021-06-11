@@ -90,7 +90,7 @@ def build_model():
     '''
     pipeline_clf = Pipeline([
                      ('transform_column', col_transformer),
-                     ('clf', RandomForestClassifier(random_state=42,n_estimators=500, min_samples_split=2, max_depth=110, criterion='entropy', class_weight='balanced', bootstrap=True ))
+                     ('clf', RandomForestClassifier(random_state=42,n_estimators=100, min_samples_split=2, max_depth=90, criterion='gini', class_weight='balanced', bootstrap=True ))
                      ]) 
 
     best_clf = pipeline_clf
