@@ -1,7 +1,7 @@
 # Capstone_Project
 ## Churn Prediction Web-App
 
-### Business Problem
+### Problem Statement
 Customer Churn is one of the nightmares any organisation wants to see. It incurs expenditures on any organization and loss of brand value. 
 To tackle this we need to understand the customer base that are likely to be churned. 
 The Customer churn app that we have proposed here predicts the likelihood of customer getting churned or not for telecom managers to buid customer oriented plans and services.
@@ -15,8 +15,25 @@ Implementation of project building process is done through following steps.
 > Containerisation of Project using Docker
 
 
-### DataSet
- We have used open source dataset from [Kaggle](https://www.kaggle.com/blastchar/telco-customer-churn). It has 7043 rows (customers) and 21 columns (features).
+### Metric
+
+   In classification predictions model returns results in four types of outcomes that could occur.
+
+>- **True positives** predicticted observation belongs to a correct class.
+
+>- **True negatives** predicticted observation does not belongs to a correct class.
+
+>- **False positives** predicticted observation belongs to a class, however in reality it does not.
+
+>- **False negatives** predicticted observation does not belongs to a class, however in reality it does.
+
+   In this project we have used **Accuracy** as our evaulation metric whic is defined as 
+
+                           Accuracy = TP+TN/TP+FP+FN+TN
+
+
+### DataSet and Data Exploration
+ We have used open source dataset from [Kaggle](https://www.kaggle.com/blastchar/telco-customer-churn). 
  
  Brief description of dastaset is as follows ([source](https://www.kaggle.com/blastchar/telco-customer-churn))
 - Customers who left within the last month – the column is called Churn
@@ -24,18 +41,98 @@ Implementation of project building process is done through following steps.
 - Customer account information – how long they’ve been a customer, contract, payment method, paperless billing, monthly charges, and total charges
 - Demographic info about customers – gender, age range, and if they have partners and dependents
 
-### Research Phase
+It has 7043 rows (customers) and 21 columns (features).
+ 
+  ![Data-Set](images/Data_Exploration.png)
+  
 
-For Research phase we have used Jupyter Notebook [Churn.ipynb](https://github.com/akshitagupta23/Udacity_DS_ND_Capstone_Project/blob/main/Churn.ipynb). This file containes 
-EDA, Feature Engineering, Hyperparameter Tunning  and Model Evaluation
 
-### ML Model & Hyperparamter Tunning
+#### Data Visualization
+  For data visualization we checked distribution of the columns through `sns.distplot` 
+  
+  ![Dist](images/EDA-1.png)
+  
+  
+  Donut chart through `matplotlib.pyplot.pie` 
+  
+  ![Donut](images/EDA-2.png)
+  
+  
+  Correlation heatmap of numerical variable
+  
+  ![Corr](images/Corr_Map.png)
 
-As part of preprocessing and feature engineering we used the Scikit-Learn's `Columntransfer`, `Ohe` and `Pipeline` for missing value imputation, standardisation.
 
-For Model building we have used Random Forest Classifier because of the presence of categorical input features. Model was serialized by `joblib` package.
+### Data Preprocessing / Feature Engineering
 
-Hyperparameter Tunning:  We have used `RandomSearchCV` and used the `clf.best_params_` to use the best tuned hyperparameters.  
+Data preprocessing/ feature engineering is executed Jupyter Notebook [Churn.ipynb](https://github.com/akshitagupta23/Udacity_DS_ND_Capstone_Project/blob/main/Churn.ipynb).
+
+We have used `Scikit-Learn` pipeline and `ColumnTransformers`.
+ColumnTransformers performs:
+> Missing value imputation
+> Scaling of non-bool values by StandardScaler
+> One hot encoding for categorical variables
+
+   ![Data-Preprocessing](images/Feature_Eng.png)
+
+### Implementation- ML Model & Hyperparamter Tunning
+
+Python 3.8 (Anaconda 3–64 bit) was used for development and testing. I also used ([Docekr](https://www.docker.com/)) to build the image.
+Project Structure looks as follows
+       
+│   .gitignore
+│   Churn.ipynb
+│   churn_model_train.py
+│   Dockerfile
+│   LICENSE
+│   model.joblib
+│   README.md
+│   requirement.txt
+│   test_sample.json
+│   web_app.py
+│
+├───Data
+│       Customer-Churn.csv
+│
+└───images
+        Churn_app_homepage.png
+        churn_batch_predict..PNG
+        churn_batch_predict.PNG
+        churn_online_predict..PNG
+        Corr_Map.png
+        customer_churn.png
+        Data_Exploration.png
+        EDA-1.png
+        EDA-2.png
+        EDA.png
+        Feature_Eng.png
+        Online_Predict_Result.png
+
+Excrepts of model training pipeline is as shown below (Ref: [Churn.ipynb](https://github.com/akshitagupta23/Udacity_DS_ND_Capstone_Project/blob/main/Churn.ipynb))
+
+   ![Model-Pipeline](images/Model_train_pipeline.png)
+   
+Excrepts of Churn Web APP from `web_app.py` being build using Streamlit
+
+  ![Streamlit-File](images/web_app_excrept.png)
+
+**Algorithm**
+     I have used bagging technique of machine learning training by using [Random Forest Algorithm](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
+     
+   ![Random-Forest](images/Algorithm.png)
+
+
+### Refinement
+For Refining the trainig we have used `RandomSearchCV` to use the best tuned hyperparameters and  `clf.best_params_`  to get the best tuned parameters.
+![Refinement](images/hpt.png)
+
+### Results
+#### Model Evaluation
+As a part of model evaluation I retrain the model using the hyper tunned parameters. This result in improving the Accuracy and Recall.
+Result metric as shown below
+  
+  ![Confusion-Matrix.png](images/confusion_mat.png)
+
 
 ### Deployment / Web APP
 For building the Web APP we have used `Streamlit` package in `web_app.py` file. 
